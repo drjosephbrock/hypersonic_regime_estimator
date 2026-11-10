@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hypersonic-regime-estimator"
+version = "0.1.0"
+description = "Estimate hypersonic thermochemical regime (perfect-gas, 1-T, 2-T) from flight conditions."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+
+[project.scripts]
+regime = "regime.__main__:main"
+
+[tool.setuptools]
+packages = ["regime"]
