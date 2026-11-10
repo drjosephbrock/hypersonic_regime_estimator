@@ -110,6 +110,8 @@ def _decide(r):
     r.chem_regime = _bin_all(r.da_chem.values()) if r.da_chem else "none"
 
     v, c = r.vib_regime, r.chem_regime
+    if c == "frozen":  # reactions too slow to matter in the shock layer
+        c = "none"
     if c == "none" and r.vib_frac < VIB_FRAC_MIN:
         r.model = (f"Perfect gas / 1-T thermally perfect adequate "
                    f"(e_vib/h < {100*VIB_FRAC_MIN:.0f}%); 2-T only for fidelity")
