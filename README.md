@@ -1,6 +1,12 @@
 # hypersonic_regime_estimator
 Python scripts to estimate relevant physics based 
 
+![Regime map](docs/regime_map.png)
+
+Velocity-altitude map of the recommended thermochemical model in the stagnation
+region (R_nose = 0.1 m), with total-enthalpy contours. Regenerate with
+`regime --map docs/regime_map.png`.
+
 ## Install
 
 ```sh
