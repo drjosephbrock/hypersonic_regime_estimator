@@ -1,5 +1,5 @@
 # hypersonic_regime_estimator
-Python scripts to estimate relevant physics based 
+Python scripts to estimate relevant physics based on freestream and nose radius or shock stand-off. These assumptions are for attached forebody flows. 
 
 ![Regime map](docs/regime_map.png)
 

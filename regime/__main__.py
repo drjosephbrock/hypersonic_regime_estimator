@@ -33,8 +33,7 @@ def main(argv=None):
 
     if a.map:
         from .plot import regime_map
-        print("wrote", regime_map(np.arange(10, 86, 2), np.arange(500, 8001, 125),
-                                  R_nose=a.rnose, fname=a.map))
+        print("wrote", regime_map(np.arange(10, 86, 2), np.arange(500, 8001, 125),R_nose=a.rnose, fname=a.map))
         return
 
     alts = _rng(a.alt)
