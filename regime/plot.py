@@ -14,6 +14,7 @@ def regime_map(alts_km, vels, R_nose=0.1, fname="regime_map.png"):
     Z = np.zeros((len(alts_km), len(vels)))
     H0 = np.zeros_like(Z)
     for i, a in enumerate(alts_km):
+        print(i,len(alts_km),a)
         for j, v in enumerate(vels):
             r = evaluate(a, v, R_nose=R_nose)
             H0[i, j] = r.h0 / 1e6
